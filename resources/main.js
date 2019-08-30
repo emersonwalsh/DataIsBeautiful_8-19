@@ -170,11 +170,36 @@ angular.module('myApp', [])
         currentData = getYearData(year);
 
         option = {
-          title: {
-            top: 40,
-            left: 100,
-            text: 'Which Creature has the Best Heart?'
-          },
+          title: [{
+            text: year + ' years',
+            textAlign: 'center',
+            right: 0,
+            top: 'center',
+            textStyle: {
+                fontSize: 60,
+                color: 'rgba(0, 0, 0, 0.5)'
+            }
+          }, {
+              text: 'Who\'s Heart Works the Hardest?',
+              left: 'center',
+              top: 10,
+              textStyle: {
+                  color: 'rgba(0, 0, 0)',
+                  fontWeight: 'normal',
+                  fontSize: 20
+              }
+          }, {
+            text: 'Data is Beautiful, August 2019',
+            target: 'blank',
+            link: 'https://www.reddit.com/r/dataisbeautiful/comments/cmrz6j/battle_dataviz_battle_for_the_month_of_august/',
+            left: 'center',
+            top: 50,
+            textStyle: {
+              color: 'rgba(0, 0, 0, 0.8)',
+              fontWeight: 'normal',
+                fontSize: 14
+            }
+        }],
           tooltip: {
               backgroundColor: 'rgba(50,50,50,0.9)',
               trigger: 'axis',
@@ -230,30 +255,38 @@ angular.module('myApp', [])
             splitLine: {
               show: false
             },
+            axisLabel: {
+              formatter: function(info) {
+                if (info === 0) {
+                  return 0
+                }
+                return info / 1000000000 + ' B';
+              }
+            },
             max: 2500000000
           },
-          graphic: [
-            {
-                type: 'group',
-                bounding: 'raw',
-                right: 250,
-                top: 100,
-                z: 100,
-                children: [
-                    {
-                        type: 'text',
-                        left: 'center',
-                        top: 'center',
-                        z: 100,
-                        style: {
-                            fill: '#000000',
-                            text: year + ' years',
-                            font: '30px "STHeiti", sans-serif'
-                        }
-                    }
-                ]
-            }
-        ],
+        //   graphic: [
+        //     {
+        //         type: 'group',
+        //         bounding: 'raw',
+        //         right: 250,
+        //         top: 85,
+        //         z: 100,
+        //         children: [
+        //             {
+        //                 type: 'text',
+        //                 left: 'center',
+        //                 top: 'center',
+        //                 z: 100,
+        //                 style: {
+        //                     fill: '#000000',
+        //                     text: year + ' years',
+        //                     font: '30px "STHeiti", sans-serif'
+        //                 }
+        //             }
+        //         ]
+        //     }
+        // ],
           series: {
             type: 'bar',
             label: {
