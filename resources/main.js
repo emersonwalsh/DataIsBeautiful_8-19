@@ -234,6 +234,7 @@ angular.module('myApp', [])
             nameTextStyle: {
               fontSize: 20
             },
+            nameGap: 30,
             data: Object.keys(data),
             axisTick: {show: false},
             axisLine: {show: false},
