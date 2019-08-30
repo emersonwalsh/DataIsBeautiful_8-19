@@ -163,7 +163,7 @@ angular.module('myApp', [])
         year++;
         console.log(year);
 
-        if (year > 80) {
+        if (year > 79) {
           clearInterval(timer);
         }
 
