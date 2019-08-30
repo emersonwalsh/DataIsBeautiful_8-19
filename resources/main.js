@@ -170,17 +170,17 @@ angular.module('myApp', [])
         option = {
           title: [{
             text: year + ' years',
-            textAlign: 'left',
-            right: 110,
-            bottom: 20,
+            textAlign: 'center',
+            right: 'right',
+            bottom: 'center',
             textStyle: {
-                fontSize: 90,
+                fontSize: 60,
                 color: 'rgba(0, 0, 0, 0.3)'
             }
           }, {
               text: 'Who\'s Heart Works the Hardest?',
               left: 'center',
-              top: 10,
+              top: '10px',
               textStyle: {
                   color: 'rgba(0, 0, 0)',
                   fontWeight: 'normal',
@@ -191,7 +191,7 @@ angular.module('myApp', [])
             target: 'blank',
             link: 'https://www.reddit.com/r/dataisbeautiful/comments/cmrz6j/battle_dataviz_battle_for_the_month_of_august/',
             left: 'center',
-            top: 50,
+            top: '50px',
             textStyle: {
               color: 'rgba(0, 0, 0, 0.8)',
               fontWeight: 'normal',
@@ -222,10 +222,10 @@ angular.module('myApp', [])
               }
           },
           grid: {
-            top: 140,
-            right: 140,
-            bottom: 140,
-            left: 140
+            top: '140px',
+            right: '140px',
+            bottom: '140px',
+            left: '140px'
 
           },
           yAxis: {
