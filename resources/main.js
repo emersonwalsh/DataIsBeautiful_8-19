@@ -34,55 +34,12 @@ angular.module('myApp', [])
     */
     function getData() {
       data = {
-        "Hamster": {
-          "Mass (grams)": 60,
-          "Resting Heart Rate (BPM)": 450,
-          "Longevity (Years)": 3,
-          "Total Heart Beats": 709560000,
-          currentHeartBeats: 0
-        },
-        "Rabbit": {
-          "Mass (grams)": 1000,
-          "Resting Heart Rate (BPM)": 205,
-          "Longevity (Years)": 9,
-          "Total Heart Beats": 969732000,
-          currentHeartBeats: 0
-        },
         'Small Dog': {
           "Creature": "Small dog",
           "Mass (grams)": 2000,
           "Resting Heart Rate (BPM)": 100,
           "Longevity (Years)": 10,
           "Total Heart Beats": 525600000,
-          currentHeartBeats: 0
-        },
-        "Chicken": {
-          "Mass (grams)": 1500,
-          "Resting Heart Rate (BPM)": 275,
-          "Longevity (Years)": 15,
-          "Total Heart Beats": 2168100000,
-          currentHeartBeats: 0
-        },
-        "Monkey": {
-          "Mass (grams)": 5000,
-          "Resting Heart Rate (BPM)": 190,
-          "Longevity (Years)": 15,
-          "Total Heart Beats": 1497960000,
-          currentHeartBeats: 0
-        },
-        "Cat": {
-          "Creature": "Cat",
-          "Mass (grams)": 2000,
-          "Resting Heart Rate (BPM)": 150,
-          "Longevity (Years)": 15,
-          "Total Heart Beats": 1182600000,
-          currentHeartBeats: 0
-        },
-        "Medium Dog": {
-          "Mass (grams)": 5000,
-          "Resting Heart Rate (BPM)": 90,
-          "Longevity (Years)": 15,
-          "Total Heart Beats": 709560000,
           currentHeartBeats: 0
         },
         "Large Dog": {
@@ -99,6 +56,20 @@ angular.module('myApp', [])
           "Total Heart Beats": 683280000,
           currentHeartBeats: 0
         },
+        "Hamster": {
+          "Mass (grams)": 60,
+          "Resting Heart Rate (BPM)": 450,
+          "Longevity (Years)": 3,
+          "Total Heart Beats": 709560000,
+          currentHeartBeats: 0
+        },
+        "Medium Dog": {
+          "Mass (grams)": 5000,
+          "Resting Heart Rate (BPM)": 90,
+          "Longevity (Years)": 15,
+          "Total Heart Beats": 709560000,
+          currentHeartBeats: 0
+        },
         "Cow": {
           "Mass (grams)": 800000,
           "Resting Heart Rate (BPM)": 65,
@@ -106,6 +77,14 @@ angular.module('myApp', [])
           "Total Heart Beats": 751608000,
           currentHeartBeats: 0
         },
+        "Large Whale": {
+          "Mass (grams)": 120000000,
+          "Resting Heart Rate (BPM)": 20,
+          "Longevity (Years)": 80,
+          "Total Heart Beats": 840960000,
+          currentHeartBeats: 0
+        },
+        
         "Pig": {
           "Mass (grams)": 150000,
           "Resting Heart Rate (BPM)": 70,
@@ -120,6 +99,13 @@ angular.module('myApp', [])
           "Total Heart Beats": 925056000,
           currentHeartBeats: 0
         },
+        "Rabbit": {
+          "Mass (grams)": 1000,
+          "Resting Heart Rate (BPM)": 205,
+          "Longevity (Years)": 9,
+          "Total Heart Beats": 969732000,
+          currentHeartBeats: 0
+        },
         "Elephant": {
           "Mass (grams)": 5000000,
           "Resting Heart Rate (BPM)": 30,
@@ -127,18 +113,33 @@ angular.module('myApp', [])
           "Total Heart Beats": 1103760000,
           currentHeartBeats: 0
         },
+        "Cat": {
+          "Creature": "Cat",
+          "Mass (grams)": 2000,
+          "Resting Heart Rate (BPM)": 150,
+          "Longevity (Years)": 15,
+          "Total Heart Beats": 1182600000,
+          currentHeartBeats: 0
+        },
+        "Monkey": {
+          "Mass (grams)": 5000,
+          "Resting Heart Rate (BPM)": 190,
+          "Longevity (Years)": 15,
+          "Total Heart Beats": 1497960000,
+          currentHeartBeats: 0
+        },
+        "Chicken": {
+          "Mass (grams)": 1500,
+          "Resting Heart Rate (BPM)": 275,
+          "Longevity (Years)": 15,
+          "Total Heart Beats": 2168100000,
+          currentHeartBeats: 0
+        },
         "Human": {
           "Mass (grams)": 90000,
           "Resting Heart Rate (BPM)": 60,
           "Longevity (Years)": 70,
           "Total Heart Beats": 2207520000,
-          currentHeartBeats: 0
-        },
-        "Large Whale": {
-          "Mass (grams)": 120000000,
-          "Resting Heart Rate (BPM)": 20,
-          "Longevity (Years)": 80,
-          "Total Heart Beats": 840960000,
           currentHeartBeats: 0
         }
       };
@@ -160,9 +161,6 @@ angular.module('myApp', [])
         timer;
 
       timer = setInterval(function () {
-        year++;
-        console.log(year);
-
         if (year > 79) {
           clearInterval(timer);
         }
@@ -172,12 +170,12 @@ angular.module('myApp', [])
         option = {
           title: [{
             text: year + ' years',
-            textAlign: 'center',
-            right: 0,
-            top: 'center',
+            textAlign: 'left',
+            right: 110,
+            bottom: 20,
             textStyle: {
-                fontSize: 60,
-                color: 'rgba(0, 0, 0, 0.5)'
+                fontSize: 90,
+                color: 'rgba(0, 0, 0, 0.3)'
             }
           }, {
               text: 'Who\'s Heart Works the Hardest?',
@@ -265,33 +263,11 @@ angular.module('myApp', [])
             },
             max: 2500000000
           },
-        //   graphic: [
-        //     {
-        //         type: 'group',
-        //         bounding: 'raw',
-        //         right: 250,
-        //         top: 85,
-        //         z: 100,
-        //         children: [
-        //             {
-        //                 type: 'text',
-        //                 left: 'center',
-        //                 top: 'center',
-        //                 z: 100,
-        //                 style: {
-        //                     fill: '#000000',
-        //                     text: year + ' years',
-        //                     font: '30px "STHeiti", sans-serif'
-        //                 }
-        //             }
-        //         ]
-        //     }
-        // ],
           series: {
             type: 'bar',
             label: {
                 show: true,
-                fontSize: 14,
+                fontSize: 12,
                 formatter: '{b}'
             },
             itemStyle: {
@@ -306,9 +282,9 @@ angular.module('myApp', [])
             data: currentData
           }
         };
-    
         myChart.setOption(option);
-      }, 750);
+        year++;
+      }, 500);
     }
 
     function getYearData(year) {
@@ -327,10 +303,10 @@ angular.module('myApp', [])
             data[creature].currentHeartBeats = data[creature].currentHeartBeats
           }
 
-
           newData.push({
             value: data[creature].currentHeartBeats,
             tooltipInfo: {
+              'Number of Heartbeats': cleanValue(data[creature]['currentHeartBeats']),
               'Longevity': data[creature]['Longevity (Years)'] + ' years',
               'Resting Heart Rate': data[creature]['Resting Heart Rate (BPM)'] + ' bpm',
               'Mass': cleanValue(data[creature]['Mass (grams)']) + ' grams'
@@ -370,5 +346,3 @@ angular.module('myApp', [])
      
      initialize();
     });
-
-    
