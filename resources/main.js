@@ -248,7 +248,7 @@ angular.module('myApp', [])
                         style: {
                             fill: '#000000',
                             text: year + ' years',
-                            font: 'bold 34px Microsoft YaHei'
+                            font: '30px "STHeiti", sans-serif'
                         }
                     }
                 ]
